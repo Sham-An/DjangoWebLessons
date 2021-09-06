@@ -36,7 +36,6 @@ class Rubric(models.Model):
         return self.name
 
 
-
     class Meta:
         verbose_name_plural = 'Рубрики'
         verbose_name = 'Рубрика'

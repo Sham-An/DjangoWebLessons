@@ -1,20 +1,25 @@
 <!DOCTYPE html>
-
-<!DOCTYPE html>
 <html>
     <head>
       <meta charset="UTF-8">
       <title>Главная :: Доска объявлений</title>
     </head>
     <body>
-    <h1>0бъявления</h1>
-    {% for bb in bbs %}
-    <div>
-      <h2>{{ bb.title }}</h2>
-      <p>{{ bb.content }}</p>
-      <p>{{ bb.published|date:"d.m.Y H:i:s" }}</p>
-    </div>
-    {% endfor %}
-</body>
+        <h1>0бъявления</h1>
+        <div>
+            <a href="{% url 'index' %}">Главная .</a>
+            {% for rubric in rubrics %}
+            <a href="{% url 'by_rubric' rubric.pk %}">{{ rubric.name }}..</a>
+            {% endfor %}
+        </div>
+        {% for bb in bbs %}
+        <div>
+            <h2>{{bb.title}} 1</h2>
+            <p>{{bb.content}} 2</p>
+            <p><а href="{% url 'by_rubric' bb.rubric.pk %}">{{bb.rubric.name}} 3</a></p>
+            <p>{{bb.published|date:"d.m.Y H:i:s"}}</p>
+        </div>
+        {% endfor %}
+    </body>
 </html>
 
