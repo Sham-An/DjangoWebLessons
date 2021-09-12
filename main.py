@@ -1,4 +1,5 @@
-#STR 44 52 57 61? 62
+#STR 44 52 57 61? 62 63 64-68?
+#Часть 2 стр 74
 # This is a sample Python script.
 
 # Press Shift+F10 to execute it or replace it with your code.

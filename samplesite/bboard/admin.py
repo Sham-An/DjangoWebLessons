@@ -1,7 +1,6 @@
 from django.contrib import admin
 from .models import Bb
-
-from.models import Rubric
+from .models import Rubric
 
 class BbAdmin(admin.ModelAdmin):
     list_display=('title', 'content', 'price', 'published', 'rubric')
